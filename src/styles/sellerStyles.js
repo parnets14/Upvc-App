@@ -1,0 +1,140 @@
+import { StyleSheet } from 'react-native';
+
+export const sellerStyles = StyleSheet.create({
+  container: {
+    marginTop:30,
+    flex: 1,
+    padding: 24,
+    backgroundColor: '#fff',
+  },
+  headline: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#black',
+    marginBottom: 16,
+  },
+  subhead: {
+    fontSize: 16,
+    color: '#566573',
+    marginBottom: 32,
+    lineHeight: 24,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#D5D8DC',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 20,
+    fontSize: 16,
+  },
+  inputFocused: {
+    borderColor: '#2E86C1',
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 8,
+    color: '#2C3E50',
+  },
+  button: {
+    backgroundColor: 'black',
+    borderRadius: 12,
+    padding: 16,
+    alignItems: 'center',
+    // marginTop: 16,
+    marginBottom: 46,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  chipContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 20,
+  },
+  videoContainer: {
+    height: 150,
+    width: '100%',
+    borderWidth: 1,
+    borderColor: '#D5D8DC',
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  videoIcon: {
+    fontSize: 40,
+    color: '#2E86C1',
+    marginBottom: 8,
+  },
+  videoText: {
+    fontSize: 16,
+    color: '#566573',
+  },
+  priorityBadge: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    backgroundColor: '#F39C12',
+    borderRadius: 16,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+  },
+  priorityText: {
+    color: 'white',
+    fontSize: 12,
+    fontWeight: 'bold',
+  },
+  otpContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 32,
+  },
+  otpInput: {
+    width: 48,
+    height: 48,
+    borderWidth: 1,
+    borderColor: '#D5D8DC',
+    borderRadius: 12,
+    textAlign: 'center',
+    fontSize: 18,
+  },
+  otpInputFocused: {
+    borderColor: '#2E86C1',
+  },
+  errorText: {
+    color: '#E74C3C',
+    marginTop: 8,
+  },
+  successContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 24,
+  },
+  successIcon: {
+    fontSize: 100,
+    color: '#2E86C1',
+    marginBottom: 32,
+  },
+  successTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  successText: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginBottom: 32,
+    lineHeight: 24,
+  },
+  highlightText: {
+    fontSize: 18,
+    textAlign: 'center',
+    color: '#F39C12',
+    marginBottom: 48,
+  },
+});

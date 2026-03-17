@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "378879351731",
+    "project_id": "upvc-connect",
+    "storage_bucket": "upvc-connect.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378879351731:android:3eaf21f0f4a89cd0b409c6",
+        "android_client_info": {
+          "package_name": "com.upvc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBREz8NO4HcCdnIinzYI0MUWO1PI8o1ZOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
