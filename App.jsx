@@ -118,6 +118,25 @@ export default function App() {
               console.error('Error updating FCM token on server:', error);
             }
           }
+
+          // Update FCM token for buyer if logged in
+          const buyerToken = await AsyncStorage.getItem('buyerToken');
+          if (buyerToken) {
+            try {
+              await axios.post(
+                'https://upvcconnect.com/api/admin/buyers/update-fcm-token',
+                { fcmToken },
+                {
+                  headers: {
+                    Authorization: `Bearer ${buyerToken}`,
+                  },
+                }
+              );
+              console.log('Buyer FCM token updated on server');
+            } catch (error) {
+              console.error('Error updating buyer FCM token on server:', error);
+            }
+          }
         }
 
         // Listen for foreground messages
@@ -223,7 +242,7 @@ export default function App() {
         // Listen for token refresh
         const unsubscribeTokenRefresh = NotificationService.onTokenRefresh(async (newToken) => {
           console.log('FCM token refreshed:', newToken);
-          // Update token on server
+          // Update token on server for seller
           const sellerToken = await AsyncStorage.getItem('sellerToken');
           if (sellerToken) {
             try {
@@ -238,6 +257,23 @@ export default function App() {
               );
             } catch (error) {
               console.error('Error updating refreshed FCM token:', error);
+            }
+          }
+          // Update token on server for buyer
+          const buyerToken = await AsyncStorage.getItem('buyerToken');
+          if (buyerToken) {
+            try {
+              await axios.post(
+                'https://upvcconnect.com/api/admin/buyers/update-fcm-token',
+                { fcmToken: newToken },
+                {
+                  headers: {
+                    Authorization: `Bearer ${buyerToken}`,
+                  },
+                }
+              );
+            } catch (error) {
+              console.error('Error updating refreshed buyer FCM token:', error);
             }
           }
         });
